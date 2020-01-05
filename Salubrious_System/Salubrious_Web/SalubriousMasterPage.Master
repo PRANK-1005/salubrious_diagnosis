@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SalubriousMasterPage.master.cs" Inherits="Salubrious_System.Salubrious_Web.SalubriousMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <form id="SalubriousMasterPage" runat="server">
+         <aside class="side-nav" id="show-side-navigation1">
+      <i class="fa fa-bars close-aside hidden-sm hidden-md hidden-lg" data-close="show-side-navigation1"></i>
+      <div class="heading">
+        <div class="info">
+          <h3><a href="#">Diagnosis Intelligent System</a></h3>
+          <!--<p>Lorem ipsum dolor sit amet consectetur.</p>-->
+        </div>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Type here"><i class="fa fa-search"></i>
+      </div>
+      <div>
+          <asp:Menu ID="MasterPageMenu" runat="server">
+              <StaticMenuStyle CssClass="categories" />
+              <DynamicMenuStyle CssClass="categories" />
+
+          </asp:Menu>
+              <%--<ul class="categories">
+                        <li><i class="fa fa-home fa-fw" aria-hidden="true"></i><a href="#"> Book an appointment</a>
+                        </li>
+                        <li><i class="fa fa-support fa-fw"></i><a href="#">Question & Answer</a>
+                        </li>
+                        <li><i class="fa fa-envelope fa-fw"></i><a href="#"> View the app status</a>
+                        </li>
+                        <li><i class="fa fa-users fa-fw"></i><a href="#"> Doctor's recommendation</a>
+                        </li>
+                        <li><i class="fa fa-bolt fa-fw"></i><a href="#">Diet Plan</a>
+                        </li>
+                        <li><i class="fa fa-bolt fa-fw"></i><a href="#">BMI Calculator</a>
+                        </li>
+                </ul>--%>
+          </div>
+    </aside>
+    <section id="contents">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <i class="fa fa-align-right"></i>
+            </button>
+            <a class="navbar-brand" href="#">my<span class="main-color">Dashboard</span></a>
+          </div>
+          <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My profile <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#"><i class="fa fa-user-o fw"></i> My account</a></li>
+                  <li><a href="#"><i class="fa fa-envelope-o fw"></i> My inbox</a></li>
+                  <li><a href="#"><i class="fa fa-question-circle-o fw"></i> Help</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#"><i class="fa fa-sign-out"></i> Log out</a></li>
+                </ul>
+              </li>
+              <li><a href="#"><i class="fa fa-comments"></i><span>23</span></a></li>
+              <li><a href="#"><i class="fa fa-bell-o"></i><span>98</span></a></li>
+              <li><a href="#"><i data-show="show-side-navigation1" class="fa fa-bars show-side-btn"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+        <div id ="BodyContentPlaceHolderDiv" style="margin-left:300px">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
